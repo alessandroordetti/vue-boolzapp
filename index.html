@@ -17,7 +17,7 @@
 </head>
 <body>
     
-    <main class="position-relative">
+    <main id="app" class="position-relative">
         <div class="green-side">
 
         </div>
@@ -80,96 +80,12 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat" name="" id="">
                     </div>
 
-                    <div class="recent-chats app">
-                        <div class="contact d-flex align-items-center justify-content-between px-4">
-                            <img src="img/Io.jpg" alt="">
+                    <div class="recent-chats">
+                        <div class="contact d-flex align-items-center justify-content-between px-4" v-for="(element) in contacts">
+                            <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
 
                             <div class="infos">
-                                <span>Michele</span>
-                                <br>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-
-                            <div>
-                                12:00
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex align-items-center justify-content-between px-4">
-                            <img src="img/Io.jpg" alt="">
-
-                            <div class="infos">
-                                <span>Michele</span>
-                                <br>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-
-                            <div>
-                                12:00
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex align-items-center justify-content-between px-4">
-                            <img src="img/Io.jpg" alt="">
-
-                            <div class="infos">
-                                <span>Michele</span>
-                                <br>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-
-                            <div>
-                                12:00
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex align-items-center justify-content-between px-4">
-                            <img src="img/Io.jpg" alt="">
-
-                            <div class="infos">
-                                <span>Michele</span>
-                                <br>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-
-                            <div>
-                                12:00
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex align-items-center justify-content-between px-4">
-                            <img src="img/Io.jpg" alt="">
-
-                            <div class="infos">
-                                <span>Michele</span>
-                                <br>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-
-                            <div>
-                                12:00
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex align-items-center justify-content-between px-4">
-                            <img src="img/Io.jpg" alt="">
-
-                            <div class="infos">
-                                <span>Michele</span>
-                                <br>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-
-                            <div>
-                                12:00
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex align-items-center justify-content-between px-4">
-                            <img src="img/Io.jpg" alt="">
-
-                            <div class="infos">
-                                <span>Michele</span>
+                                <span>{{element.name}}</span>
                                 <br>
                                 <span>Ultimo messaggio inviato</span>
                             </div>
@@ -201,7 +117,7 @@
 
                 </div>
 
-                <div class="col-8 p-3 d-flex align-items-center">
+                <div class="col-8 p-3 d-flex align-items-center bg-secondary">
                     <i class="fa-solid fa-face-smile fs-4"></i>
 
                     <input class="message-input rounded mx-3 p-1" placeholder="Scrivi un messaggio" type="text">
