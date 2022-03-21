@@ -12,33 +12,78 @@
 /*     background-color: rgba(168, 169, 210, 0.75);
  */    
     height: 90vh;
-    top: 50px;
+    top: 57px;
     left: 300px;
 }
 
 .chat-header {
-    height: 7%;
-    background-color: fuchsia;
+    height: 10%;
+    background-color: rgb(234,234,234);
 }
 
 .chat-main {
-    height: 85%;
-    background-color: tan;
+    height: 82%;
+    background-color: white;
+    border: solid lightgray;
+}
+
+.chat-main .col-4 {
+    border-right: solid lightgray;
+}
+
+.chat-main .col-8 {
+    background-image: url('../img/sfondo.png');
 }
 
 img {
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
     border-radius: 50%;
+    border: solid lightgray;
+}
+
+.latest-access {
+    color: antiquewhite;
+}
+
+.bell-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+}
+
+.fa-bell-slash {
+    color: rgb(142, 218, 252);
+}
+
+.search-contacts input {
+    width: 85%;
+    border: transparent;
+}
+
+.contact {
+    height: 85px;
+}
+
+.infos {
+    flex-basis: 60%;
+}
+
+.right-message {
+    text-align: end;
 }
 
 .mute-chat-messages {
     height: 12%;
+    background-color: rgb(142, 218, 252);
 }
 
 .chat-footer {
-    background-color: darkcyan;
-    height: 8%;
+    height:8%;
+    background-color: white;
+    border: solid lightgrey;
 }
 
 .message-input {
