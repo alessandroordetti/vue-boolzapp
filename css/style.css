@@ -88,5 +88,5 @@ img {
 
 .message-input {
     width: 90%;
-    border: transparent
+    border: 1px solid lightgray;
 }
