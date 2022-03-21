@@ -18,5 +18,24 @@
 
 .chat-header {
     height: 7%;
-    background-color: cornflowerblue;
+    background-color: fuchsia;
+}
+
+.chat-main {
+    height: 85%;
+    background-color: tan;
+}
+
+.mute-chat-messages {
+    height: 12%;
+}
+
+.chat-footer {
+    background-color: darkcyan;
+    height: 8%;
+}
+
+.message-input {
+    width: 90%;
+    border: transparent
 }
