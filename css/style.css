@@ -5,7 +5,7 @@
 
 .gray-side {
     height: 85vh;
-    background-color: rgb(216,219,214);
+    background-color: rgb(192, 192, 192);
 }
 
 .container {
@@ -24,6 +24,12 @@
 .chat-main {
     height: 85%;
     background-color: tan;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 .mute-chat-messages {
