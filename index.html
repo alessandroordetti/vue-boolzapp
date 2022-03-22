@@ -44,10 +44,10 @@
 
                 <div class="col-8 d-flex justify-content-between align-items-center">
                     <div class="other-user-icon d-flex align-items-center">
-                        <img class="mx-2" src="img/avatar_1.jpg" alt="Immagine interlocutore principale">
+                        <img class="mx-2" :src="'img/avatar' + currentUser?.avatar + '.jpg'" alt="Immagine interlocutore principale">
 
                         <div>
-                            <span class="fs-5">Michele</span>
+                            <span class="fs-5">{{currentUser?.name}}</span>
                             <br>
                             <span class="latest-access text-secondary">Ultimo accesso: oggi alle ore 12:30</span>
                         </div>
@@ -62,7 +62,7 @@
             </div>
 
             <div class="row chat-main">
-                <div class="col-4 ">
+                <div class="col-4 g-0">
                     <div class="mute-chat-messages p-3 d-flex align-items-center">
                         <div class="bell-container bg-white mx-3">
                             <i class="fa-solid fa-bell-slash fs-2"></i>
@@ -81,7 +81,7 @@
                     </div>
 
                     <div class="recent-chats">
-                        <div class="contact d-flex align-items-center justify-content-between px-4" v-for="(element) in contacts">
+                        <div class="contact d-flex align-items-center justify-content-between px-4" v-for="(element) in contacts" @click="selectChat(element)">
                             <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
 
                             <div class="infos">
@@ -98,17 +98,9 @@
                 </div>
 
                 <div class="col-8 p-3">
-                    <p class="">
-                        Hai portato a spasso il cane?
-                    </p>
-
-                    <p class="right-message">
-                        Ricordati di stendere i panni
-                    </p>
-
-                    <p class="">
-                        Tutto fatto!
-                    </p>
+                    <div v-for="(element, i) in currentUser?.messages">
+                        <p>{{element.message}}</p>
+                    </div>
                 </div>
             </div>
 
@@ -117,7 +109,7 @@
 
                 </div>
 
-                <div class="col-8 p-3 d-flex align-items-center bg-secondary">
+                <div class="col-8 p-3 d-flex align-items-center">
                     <i class="fa-solid fa-face-smile fs-4"></i>
 
                     <input class="message-input rounded mx-3 p-1" placeholder="Scrivi un messaggio" type="text">

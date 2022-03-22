@@ -1,10 +1,10 @@
 .green-side {
-    height: 15vh;
+    height: 20vh;
     background-color: rgb(0, 150, 136);
 }
 
 .gray-side {
-    height: 85vh;
+    height: 80vh;
     background-color: rgb(192, 192, 192);
 }
 
@@ -25,7 +25,7 @@
     height: 82%;
     background-color: white;
     border: solid lightgray;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .chat-main .col-4 {
@@ -62,6 +62,7 @@ img {
 .search-contacts input {
     width: 85%;
     border: transparent;
+    overflow-y: clip;
 }
 
 .contact {
@@ -72,8 +73,13 @@ img {
     flex-basis: 60%;
 }
 
-.right-message {
+.green-message {
+    background-color: rgba(91, 247, 91, 0.795);
     text-align: end;
+}
+
+.white-message {
+    background-color: white;
 }
 
 .mute-chat-messages {

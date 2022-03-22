@@ -3,6 +3,9 @@ const app = new Vue (
         el: '#app',
 
         data: {
+
+            mioIndice: 1,
+
             contacts: [
                 {
                     name: 'Michele',
@@ -165,6 +168,15 @@ const app = new Vue (
                         }
                     ],
                 }
-            ]            
+            ],
+
+            currentUser: null,
+        },
+
+        methods: {
+            selectChat (user) {
+                this.currentUser = user;
+            }
         }
     });
+
