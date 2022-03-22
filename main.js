@@ -176,7 +176,7 @@ const app = new Vue (
         methods: {
             selectChat (user) {
                 this.currentUser = user;
-            }
+            },
         }
     });
 

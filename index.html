@@ -82,7 +82,7 @@
 
                     <div class="recent-chats">
                         <div class="contact d-flex align-items-center justify-content-between px-4" v-for="(element) in contacts" @click="selectChat(element)">
-                            <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
+                            <img :src="'img/avatar' + element.avatar + '.jpg'" :alt="'Immagine di ' + element.name">
 
                             <div class="infos">
                                 <span>{{element.name}}</span>
@@ -98,8 +98,10 @@
                 </div>
 
                 <div class="col-8 p-3">
-                    <div v-for="(element, i) in currentUser?.messages">
-                        <p>{{element.message}}</p>
+                    <div v-for="(messages, element, i) in currentUser?.messages" :class="(messages.status == 'sent') ? 'green-message , offset-8 , p-2 , rounded' : 'white-message , p-2 , rounded'">
+                        <div class="d-inline-block">
+                            <span>{{messages.message}}</span>
+                        </div>
                     </div>
                 </div>
             </div>
