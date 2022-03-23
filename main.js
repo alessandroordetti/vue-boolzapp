@@ -4,9 +4,9 @@ const app = new Vue (
 
         data: {
 
-            mioIndice: 1,
-
             nuovoMessaggio: '',
+
+            risposta: '',
 
             contacts: [
                 {
@@ -180,16 +180,26 @@ const app = new Vue (
                 this.currentUser = user;
             },
 
-            inviaMessaggio(contacts, index, messageContent) {
+            inviaMessaggio() {
                 const newMessage = {
-                    message: messageContent,
-                    status: 'sent'
+                    message: this.nuovoMessaggio,
+                    status: 'sent',
                 };
 
-                if(messageContent.trim() !== '' ) {
-                    contacts[index].messages.push(newMessage);
-                }
-            }
+                if(this.nuovoMessaggio.trim() !== '' ) {
+                    this.currentUser.messages.push(newMessage);
+                };
+
+                
+                setTimeout(() => {
+                    const messaggioNuovo = {
+                        message: 'OK!',
+                        status: 'received',
+                    };
+
+                    this.currentUser.messages.push(messaggioNuovo);
+                }, 1000)
+            },
         }
     });
 
