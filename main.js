@@ -6,6 +6,8 @@ const app = new Vue (
 
             mioIndice: 1,
 
+            nuovoMessaggio: '',
+
             contacts: [
                 {
                     name: 'Michele',
@@ -177,6 +179,17 @@ const app = new Vue (
             selectChat (user) {
                 this.currentUser = user;
             },
+
+            inviaMessaggio(contacts, index, messageContent) {
+                const newMessage = {
+                    message: messageContent,
+                    status: 'sent'
+                };
+
+                if(messageContent.trim() !== '' ) {
+                    contacts[index].messages.push(newMessage);
+                }
+            }
         }
     });
 

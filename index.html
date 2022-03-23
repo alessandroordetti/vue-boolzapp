@@ -98,7 +98,7 @@
                 </div>
 
                 <div class="col-8 p-3">
-                    <div v-for="(messages, element, i) in currentUser?.messages" :class="(messages.status == 'sent') ? 'green-message , offset-8 , p-2 , rounded' : 'white-message , p-2 , rounded'">
+                    <div v-for="(messages, element, i) in currentUser?.messages" :class="(messages.status == 'sent') ? 'green-message , offset-8 , p-2 , rounded, mb-3' : 'white-message , p-2 , rounded , mb-3'">
                         <div class="d-inline-block">
                             <span>{{messages.message}}</span>
                         </div>
@@ -114,7 +114,7 @@
                 <div class="col-8 p-3 d-flex align-items-center">
                     <i class="fa-solid fa-face-smile fs-4"></i>
 
-                    <input class="message-input rounded mx-3 p-1" placeholder="Scrivi un messaggio" type="text">
+                    <input class="message-input rounded mx-3 p-1" placeholder="Scrivi un messaggio" type="text" v-model="nuovoMessaggio" @keyup.enter="inviaMessaggio(contacts, mioIndice, nuovoMessaggio)">
 
                     <i class="fa-solid fa-microphone fs-4"></i>
                 </div>
