@@ -75,12 +75,14 @@ img {
 
 .green-message {
     background-color: rgba(91, 247, 91, 0.795);
-    
+    border-radius: 10px;
 }
 
 .white-message {
     background-color: white;
     width: 150px;
+    border-radius: 10px;
+
 }
 
 .mute-chat-messages {

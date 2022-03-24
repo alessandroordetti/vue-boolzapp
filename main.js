@@ -6,8 +6,6 @@ const app = new Vue (
 
             nuovoMessaggio: '',
 
-            risposta: '',
-
             contacts: [
                 {
                     name: 'Michele',
