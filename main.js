@@ -188,6 +188,8 @@ const app = new Vue (
                     this.currentUser.messages.push(newMessage);
                 };
 
+                this.nuovoMessaggio = '';
+
                 
                 setTimeout(() => {
                     const messaggioNuovo = {
